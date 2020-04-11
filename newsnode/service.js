@@ -25,7 +25,7 @@ app.all('*', function (req, res, next) {
 // 获取栏目接口
 app.get('/list/titles',function(req,res){
 //数据
-    console.log(req.query)
+    // console.log(req.query)
     let titledata = fs.readFileSync('./newdata/title.json').toString()
     res.send(titledata);
 
@@ -122,7 +122,7 @@ app.post('/list/editsectlist',function(req,res){
     try {
         var form = new multiparty.Form({ uploadDir: './public/images' });
         form.parse(req, function(err, fields, files) {
-            console.log(fields)
+            // console.log(fields)
             let titledata = JSON.parse(fs.readFileSync('./newdata/title.json').toString());
             let sectiondata = JSON.parse(fs.readFileSync('./newdata/newtilesect.json').toString());
             if(fields.img[0].length>100){
@@ -156,7 +156,7 @@ app.post('/list/editsectlist',function(req,res){
                             if(e){
                                 fs.unlink('./newdata/images/'+detelimg, (err) => {
                                     if(err) throw err;
-                                    console.log('删除成功');
+                                    // console.log('删除成功');
                                 });
                             }
                         })
