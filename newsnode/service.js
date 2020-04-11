@@ -237,6 +237,6 @@ app.post('/list/deletesectlist',function(req,res){
     }
 })
 //定义端口，此处所用为3000端口，可自行更改
-var server = app.listen(3000,function(){
-    console.log('服务启动成功 prot:3000...');
+var server = app.listen(80,function(){
+    console.log('服务启动成功 prot:80...');
 })
