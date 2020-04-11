@@ -222,7 +222,7 @@
                         sddd.append('title_index',this.state);
                         $.ajax({
                             type:"post",
-                            url:"http://localhost:3000/list/deletesectlist",
+                            url:"http://172.17.190.179:3000/list/deletesectlist",
                             data:sddd,
                             dataType:"json",
                             // 告诉jQuery不要去处理发送的数据
@@ -283,13 +283,13 @@
                 var this_ = this;
                 $.ajax({
                     type:"get",
-                    url:"http://localhost:3000/list/titles",
+                    url:"http://172.17.190.179:3000/list/titles",
                     dataType:"json",
                     success:function(success){
                         // console.log(success)
                         $.ajax({
                             type:"get",
-                            url:"http://localhost:3000/list/sections",
+                            url:"http://172.17.190.179:3000/list/sections",
                             dataType:"json",
                             success:function(successtwo){
                                 // console.log(successtwo);
@@ -400,7 +400,7 @@
                     sddd.append('column_type',this.dialogform.column_type);
                     $.ajax({
                         type:"post",
-                        url:"http://localhost:3000/list/addsectList",
+                        url:"http://172.17.190.179:3000/list/addsectList",
                         data:sddd,
                         dataType:"json",
                         // 告诉jQuery不要去处理发送的数据
@@ -430,7 +430,7 @@
                     sddd.append('column_index',this.column_index);
                     $.ajax({
                         type:"post",
-                        url:"http://localhost:3000/list/editsectlist",
+                        url:"http://172.17.190.179:3000/list/editsectlist",
                         data:sddd,
                         dataType:"json",
                         // 告诉jQuery不要去处理发送的数据
