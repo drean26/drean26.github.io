@@ -68,7 +68,7 @@ app.post('/list/addsectList',function(req,res,next){
                     sectiondata[fields.title_column[0]] = [];
                     sectiondata[fields.title_column[0]].push(
                         {
-                                imgUrl: "http://www.rzkchina.com/newsnode/newdata/images/"+imgName, 
+                                imgUrl: "http://www.rzkchina.com/newdata/images/"+imgName, 
                                 caseName:fields.caseTitle[0],
                                 caseText:fields.caseText[0],
                                 caseTitle:fields.caseTitle[0],
@@ -79,7 +79,7 @@ app.post('/list/addsectList',function(req,res,next){
                     
                 }else{
                         sectiondata[fields.title_column[0]].push({
-                            imgUrl: "http://www.rzkchina.com/newsnode/newdata/images/"+imgName, 
+                            imgUrl: "http://www.rzkchina.com/newdata/images/"+imgName, 
                             caseName:fields.caseTitle[0],
                             caseText:fields.caseText[0],
                             caseTitle:fields.caseTitle[0],
@@ -138,7 +138,7 @@ app.post('/list/editsectlist',function(req,res){
                     }else{
                         let detelimg = sectiondata[fields.title_column[0]][fields.column_index[0]].imgUrl;
                         sectiondata[fields.title_column[0]][fields.column_index[0]]={
-                             imgUrl: "http://www.rzkchina.com/newsnode/newdata/images/"+imgName, 
+                             imgUrl: "http://www.rzkchina.com/newdata/images/"+imgName, 
                             caseName:fields.caseTitle[0],
                             caseText:fields.caseText[0],
                             caseTitle:fields.caseTitle[0],
@@ -151,7 +151,7 @@ app.post('/list/editsectlist',function(req,res){
                                 console.error(err);
                             }
                         })
-                        detelimg = detelimg.split('http://www.rzkchina.com/newsnode/newdata/images/')[1];
+                        detelimg = detelimg.split('http://www.rzkchina.com/newdata/images/')[1];
                         fs.exists('./newdata/images/'+detelimg, function(e){
                             if(e){
                                 fs.unlink('./newdata/images/'+detelimg, (err) => {
@@ -237,6 +237,6 @@ app.post('/list/deletesectlist',function(req,res){
     }
 })
 //定义端口，此处所用为3000端口，可自行更改
-var server = app.listen(80,function(){
-    console.log('服务启动成功 prot:80...');
+var server = app.listen(8080,function(){
+    console.log('服务启动成功 prot:8080...');
 })
